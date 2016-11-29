@@ -38,7 +38,9 @@
     
     //https//itunes.apple.com/cn/app/qq/id444934666?mt=8
     //当前应用商店的下载地址
-    NSString *appItunesUrlStr =  [NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@",appid];;
+    NSString *appItunesUrlStr =  [NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@",appid];
+        //@"https://itunes.apple.com/cn/lookup?id=%@" //如果你的app发布区域只在中国 请加/cn 否则返回数据有问题
+
     NSString *newUrlStr = [appItunesUrlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     requestUrlStr = newUrlStr;
